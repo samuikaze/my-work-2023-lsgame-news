@@ -1,0 +1,481 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": true,
+      "columnPrimaryKey": true,
+      "columnUnique": true,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MariaDB",
+    "databaseName": "lsgames_news",
+    "canvasType": "@vuerd/builtin-sql-ddl",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "news",
+        "comment": "最新消息",
+        "columns": [
+          {
+            "name": "news_id",
+            "comment": "最新消息 PK",
+            "dataType": "BIGINT(11)",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 73.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "d432e4cd-b190-4163-b6e0-cd04098d513d"
+          },
+          {
+            "name": "news_type_id",
+            "comment": "最新消息種類 PK",
+            "dataType": "BIGINT(11)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 83.50390625,
+              "widthComment": 99.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "473a5424-347f-4777-ad89-e41a7431ae2b"
+          },
+          {
+            "name": "news_title",
+            "comment": "最新消息標題",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.56298828125,
+              "widthComment": 80,
+              "widthDataType": 86.3984375,
+              "widthDefault": 60
+            },
+            "id": "82218d88-717a-496e-b6f4-0b91fdc418d7"
+          },
+          {
+            "name": "news_content",
+            "comment": "最新消息內容",
+            "dataType": "VARCHAR(1024)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 86.20166015625,
+              "widthComment": 80,
+              "widthDataType": 101.4677734375,
+              "widthDefault": 60
+            },
+            "id": "efdc5247-1da7-4b6e-938b-a0c543d71e83"
+          },
+          {
+            "name": "created_user_id",
+            "comment": "建立帳號 PK",
+            "dataType": "BIGINT(11)",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 96.9990234375,
+              "widthComment": 73.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "cfd12503-c62d-4949-b985-b4bb1abcf7e4"
+          },
+          {
+            "name": "created_at",
+            "comment": "建立時間",
+            "dataType": "DATETIME",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.39404296875,
+              "widthComment": 60,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "6e246704-8735-4d01-ad2f-d56c0f0f21b1"
+          },
+          {
+            "name": "updated_user_id",
+            "comment": "最後更新帳號 PK",
+            "dataType": "BIGINT(11)",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 102.92138671875,
+              "widthComment": 99.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "b1161630-b974-4e51-8150-853ddea68364"
+          },
+          {
+            "name": "updated_at",
+            "comment": "最後更新時間",
+            "dataType": "DATETIME",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.31640625,
+              "widthComment": 80,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "237fb153-4469-4555-89a7-e967a4142031"
+          },
+          {
+            "name": "deleted_user_id",
+            "comment": "刪除帳號 PK",
+            "dataType": "BIGINT(11)",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 97.697265625,
+              "widthComment": 73.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "0f28a8cc-94d1-47aa-b258-eb6876e1f668"
+          },
+          {
+            "name": "deleted_at",
+            "comment": "刪除時間",
+            "dataType": "DATETIME",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66.09228515625,
+              "widthComment": 60,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "901d45cc-8c1e-4818-b2a1-de82a326ce11"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 135,
+          "top": 100,
+          "zIndex": 32,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "a6c5fb66-a875-4be9-9dd6-4d6a26a02531"
+      },
+      {
+        "name": "news_types",
+        "comment": "最新消息種類",
+        "columns": [
+          {
+            "name": "news_type_id",
+            "comment": "最新消息種類 PK",
+            "dataType": "BIGINT(11)",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 83.50390625,
+              "widthComment": 99.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "1a8b331c-2d0b-4604-81f9-623d2f836acd"
+          },
+          {
+            "name": "name",
+            "comment": "最新消息種類名稱",
+            "dataType": "VARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 106,
+              "widthDataType": 86.3984375,
+              "widthDefault": 60
+            },
+            "id": "11a59a60-b4f9-4a3b-9c4a-dc344188b553"
+          },
+          {
+            "name": "created_user_id",
+            "comment": "建立帳號 PK",
+            "dataType": "BIGINT(11)",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 96.9990234375,
+              "widthComment": 73.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "3e3530de-026c-4434-af9e-1164518ecc37"
+          },
+          {
+            "name": "created_at",
+            "comment": "建立時間",
+            "dataType": "DATETIME",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.39404296875,
+              "widthComment": 60,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "b6d16bd8-dc2e-4ee2-9542-82ec89b1b4e1"
+          },
+          {
+            "name": "updated_user_id",
+            "comment": "最後更新帳號 PK",
+            "dataType": "BIGINT(11)",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 102.92138671875,
+              "widthComment": 99.14453125,
+              "widthDataType": 68.1552734375,
+              "widthDefault": 60
+            },
+            "id": "47a60059-a524-4109-b044-83ce855fc0ba"
+          },
+          {
+            "name": "updated_at",
+            "comment": "最後更新時間",
+            "dataType": "DATETIME",
+            "default": "NULL",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.31640625,
+              "widthComment": 80,
+              "widthDataType": 64.60693359375,
+              "widthDefault": 60
+            },
+            "id": "e01646cd-8d1f-4385-8cc7-4dc876a1831b"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 788,
+          "top": 201,
+          "zIndex": 33,
+          "widthName": 71.99560546875,
+          "widthComment": 80
+        },
+        "visible": true,
+        "id": "1e40076a-d098-4e0a-9506-36832fa5647e"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "1e40076a-d098-4e0a-9506-36832fa5647e",
+          "columnIds": [
+            "1a8b331c-2d0b-4604-81f9-623d2f836acd"
+          ],
+          "x": 788,
+          "y": 297,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "a6c5fb66-a875-4be9-9dd6-4d6a26a02531",
+          "columnIds": [
+            "473a5424-347f-4777-ad89-e41a7431ae2b"
+          ],
+          "x": 652.53369140625,
+          "y": 237,
+          "direction": "right"
+        },
+        "constraintName": "fk_news_types_to_news",
+        "visible": true,
+        "id": "fbc343d7-4c56-43ab-9f1f-b49fd6da5189"
+      }
+    ]
+  }
+}

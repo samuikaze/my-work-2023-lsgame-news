@@ -1,48 +1,30 @@
-# DotNet 7 Template
+ï»¿# æ´›å¬‰éŠæˆ² LSGames æœ€æ–°æ¶ˆæ¯å¾Œç«¯å°ˆæ¡ˆ
 
-³o¥÷ÀÉ®×±N·|»¡©ú¦p¦ó±q³o­Ó¼ÒªO¤¤¶}©l·sªº«áºİ¸Ñ¨M¤è®×
+> [è¿”å›æ ¹ç›®éŒ„](https://github.com/samuikaze/my-work-2023)
 
-## ¨Ï¥Î«e
+é€™æ˜¯æ´›å¬‰éŠæˆ²çš„å¾Œç«¯å°ˆæ¡ˆï¼Œä½¿ç”¨ .Net Core 7 (C#) æ’°å¯«è€Œæˆ
 
-1. ½Ğ¥ı±N API¡BRepository ±M®×¦WºÙ­«·s©R¦W
-2. ±N½T»{¦UÃş§O»P¤¶­±ªº©R¦WªÅ¶¡¬O§_¥¿½T
+## èªªæ˜
 
-## appSettings.json
+æœ¬å°ˆæ¡ˆæ˜¯å¾[æ´›å¬‰éŠæˆ² LSGames å¾Œç«¯å°ˆæ¡ˆ](https://github.com/samuikaze/my-work-2023-lsgame-backend)æ‰€æ‹†åˆ†å‡ºä¾†å…¶ä¸­ä¸€å€‹å°ˆæ¡ˆï¼Œè®“é–‹ç™¼èˆ‡ç¶­è­·å¯ä»¥æ›´å°ˆæ³¨æ–¼æœ€æ–°æ¶ˆæ¯é€™å€‹é ˜åŸŸã€‚
 
-¦p»İ¨Ï¥Î¸ê®Æ®w¡A½Ğ¥´¶} `ServiceProviders/DatabaseServiceProvider.cs` ±Nµù¸Ñ¥ş³¡¥´¶}¡A¨Ã­×§ï DBContext ¦WºÙ¬°¥¿½Tªº¦WºÙ¡A¦P®É½Ğ±N¸ê®Æ®w³s½u¦r¦ê¡B¸ê®Æ®w±b¸¹»P±K½X³]©w§¹¦¨¡A§_«h±M®×±NµLªk±Ò°Ê
+## äº‹å‰æº–å‚™
 
-## Service »P Repository Ãş§O»P¤¶­±¸j©w
+ä½¿ç”¨æœ¬å°ˆæ¡ˆè«‹å…ˆå®‰è£ä»¥ä¸‹è»Ÿé«”
 
-Service »P Repository ªºÃş§O»P¤¶­±»İ¶i¦æ¸j©w¡A§_«h DI ±NµLªk¥¿±`ª`¤J
+- Visual Studio
+- MySQL æˆ– MariaDB
 
-1. ¥´¶} `ServiceProviders/ServiceMapperProvider.cs`¡A¨Ì¾Ú½d¨Ò±NÃş§O»P¤¶­±¸j©w°_¨Ó
+## ç·šä¸Šå±•ç¤º
 
-## Repository ±M®×³]©w
+- æº–å‚™ä¸­
 
-1. ¥ı±N Repository ±M®×³]©w¬°±Ò°Ê±M®×
-2. ¨Ï¥Î¥H¤U«ü¥O±N«ü©w¸ê®Æ®w¤¤ªº¸ê®Æªí¶i¦æ¤Ï¦V¤uµ{¡A«Ø¥ß¥X Model ª«¥ó
+## æœ¬æ©Ÿé™¤éŒ¯
 
-	```Powershell
-	Scaffold-DbContext "Server=<SERVER_URI>; Port=<SERVER_PORT>; Database=<DATABASE_NAME>; User ID=<DATABASE_USERNAME>; Password=<DATABASE_PASSWORD>" Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir DBContexts -Tables <TABLE_NAME> Project <REPOSITORY_PROJECT_NAME> -Force -NoOnConfiguring
-	```
+å¯ä»¥éµå¾ªä»¥ä¸‹æ­¥é©Ÿåœ¨æœ¬æ©Ÿé€²è¡Œé™¤éŒ¯æˆ–æª¢è¦–
 
-3. ¥´¶} `ServiceProviders/DatabaseServiceProvider.cs`¡A±N³Ì¤U¤èªºµù¸Ñ¥´¶}¡A¨Ã±N DBContext ­×§ï¬°¥¿½TªºÃş§O
-	> ­Y¦³¦h­Ó DBContext ¤]½Ğ¦b³oÃä¤@¨Ã«Å§i
-4. ±N Api ±M®×³]©w¬°±Ò°Ê±M®×
+> âš ï¸è«‹æ³¨æ„ï¼Œ`appsettings.Development.json` æª”ä¸­çš„ç›¸é—œè¨­å®šè«‹ä¾æ“šéœ€æ±‚ä½œä¿®æ”¹
 
-## AutoMapper Profile «Å§i
-
-1. ¦b `AutoMapperProfiles` ¸ê®Æ§¨¤U·s¼W¤@­Ó ¥ô·N¦WºÙªº Profile Ãş§O
-2. ¦bÃş§O¤¤«Å§i»İ­n¶i¦æ Mapper ªºÃş§O¸j©w
-
-## °Ñ¦Ò¸ê®Æ
-
-- [Using the Repository Pattern with the Entity Framework](https://medium.com/@mlbors/using-the-repository-pattern-with-the-entity-framework-fa4679f2139)
-- [Scaffolding (Reverse Engineering)](https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding/?tabs=vs)
-- [Get ConnectionString from appsettings.json](https://stackoverflow.com/a/45845041)
-- [Setting connection string with username and password in ASP.Core](https://stackoverflow.com/a/41624833)
-- [[EF Core] ¨Ï¥Î.NET Core CLI«Ø¥ß¸ê®Æ®w¹êÅéÃş«¬](https://dotblogs.com.tw/jerry809/2019/03/13/105934)
-- [Creating a Model for an Existing Database in Entity Framework Core](https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx)
-- [Pomelo EntityFrameworkCore Mysql - Getting Started](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql/blob/master/README.md#getting-started)
-- [AutoMapper ¡X¡X Ãş§OÂà´«¶W¬Ù¤O](https://igouist.github.io/post/2020/07/automapper/)
-- [Dependency Injection - Automapper documentation](https://docs.automapper.org/en/stable/Dependency-injection.html)
+1. `git clone` å°‡æœ¬å°ˆæ¡ˆ clone åˆ°æœ¬æ©Ÿ
+2. é€é Visual Studio æ‰“é–‹æœ¬å°ˆæ¡ˆ
+3. åµéŒ¯é¸å–®é¸æ“‡ `IIS Express` å•Ÿå‹•åµéŒ¯
