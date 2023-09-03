@@ -11,6 +11,9 @@ namespace LSGames.News.Api.ServiceProviders
             string? connectionString = config.GetConnectionString("Weathers");
             string? username = config.GetValue<string>("Credentials:Weathers:Username");
             string? password = config.GetValue<string>("Credentials:Weathers:Password");
+            Console.WriteLine($"connectionString = {connectionString}");
+            Console.WriteLine($"username = {username}");
+            Console.WriteLine($"password = {password}");
             if (connectionString == null || username == null || password == null)
             {
                 throw new ArgumentNullException("Connection string, Username or Password setting in appsettings.json can not be null.");
