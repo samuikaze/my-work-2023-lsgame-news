@@ -30,17 +30,17 @@ spec:
             - containerPort: 80
               protocol: TCP
           env:
-            - name: ConnectionStrings:LSGamesNews
+            - name: ConnectionStrings__LSGamesNews
               valueFrom:
                 secretKeyRef:
                   name: lsgames-news-secrets
                   key: database.host
-            - name: Credentials:LSGamesNews:Username
+            - name: Credentials__LSGamesNews__Username
               valueFrom:
                 secretKeyRef:
                   name: lsgames-news-secrets
                   key: database.username
-            - name: Credentials:LSGamesNews:Password
+            - name: Credentials__LSGamesNews__Password
               valueFrom:
                 secretKeyRef:
                   name: lsgames-news-secrets
