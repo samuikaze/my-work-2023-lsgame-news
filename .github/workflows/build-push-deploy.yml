@@ -99,7 +99,7 @@ jobs:
           # 指定要部署的文件名稱與位置
           # 也可以指定資料夾，這個 Action 會把資料夾下的所有 yaml 檔案拿出來部署
           manifests: |
-            .kubernetes/deployment.production.yaml
+            .kubernetes/deployment.yaml
           # 要部署的應用程式所在 namespace
           # Service Account 所在的 namespace 也要一樣，否則部署會因權限被拒絕
           namespace: smkz-for-work
