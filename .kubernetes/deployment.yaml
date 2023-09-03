@@ -1,0 +1,63 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lsgames-news-backend
+  labels:
+    app: lsgames-news-backend
+  namespace: smkz-for-work
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lsgames-news-backend
+  template:
+    metadata:
+      labels:
+        app: lsgames-news-backend
+    spec:
+      containers:
+        - name: lsgames-news-backend
+          image: $secrets.REGISTRY_URL/lsgames-news-backend:latest
+          resources:
+            requests:
+              memory: 512Mi
+              cpu: 250m
+            limits:
+              memory: 512Mi
+              cpu: 250m
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ConnectionStrings:LSGamesNews
+              valueFrom:
+                secretKeyRef:
+                  name: lsgames-news-secrets
+                  key: database.host
+            - name: Credentials:LSGamesNews:Username
+              valueFrom:
+                secretKeyRef:
+                  name: lsgames-news-secrets
+                  key: database.username
+            - name: Credentials:LSGamesNews:Password
+              valueFrom:
+                secretKeyRef:
+                  name: lsgames-news-secrets
+                  key: database.password
+
+---
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: lsgames-news-backend
+  namespace: smkz-for-work
+spec:
+  type: ClusterIP
+  selector:
+    app: lsgames-news-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
