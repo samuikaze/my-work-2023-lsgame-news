@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using LSGames.News.Api.Models.ServiceModels;
 using LSGames.News.Api.Models.ViewModels;
 using LSGames.News.Repository.Models;

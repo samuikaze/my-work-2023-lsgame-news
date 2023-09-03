@@ -1,4 +1,4 @@
-﻿using LSGames.News.Repository.DBContexts;
+using LSGames.News.Repository.DBContexts;
 using LSGames.News.Repository.Repositories.Abstracts;
 using Microsoft.EntityFrameworkCore;
 using System;

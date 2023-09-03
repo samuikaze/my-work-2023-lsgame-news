@@ -9,7 +9,7 @@ namespace LSGames.News.Api.Controllers
 {
     [ApiController]
     [Route("news")]
-    [SwaggerTag("³Ì·s®ø®§")]
+    [SwaggerTag("æœ€æ–°æ¶ˆæ¯")]
     public class NewsController : ControllerBase
     {
         private readonly ILogger<NewsController> _logger;
@@ -27,7 +27,7 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// ¨ú±o³Ì·s®ø®§
+        /// å–å¾—æœ€æ–°æ¶ˆæ¯
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -40,7 +40,7 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// ¨ú±o©Ò¦³³Ì·s®ø®§ºØÃş
+        /// å–å¾—æ‰€æœ‰æœ€æ–°æ¶ˆæ¯ç¨®é¡
         /// </summary>
         /// <returns></returns>
         [HttpGet("types")]
@@ -51,9 +51,9 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// ¨Ì¾Ú³Ì·s®ø®§ PK ¨ú±o³Ì·s®ø®§
+        /// ä¾æ“šæœ€æ–°æ¶ˆæ¯ PK å–å¾—æœ€æ–°æ¶ˆæ¯
         /// </summary>
-        /// <param name="newsId">³Ì·s®ø®§ PK</param>
+        /// <param name="newsId">æœ€æ–°æ¶ˆæ¯ PK</param>
         /// <returns></returns>
         [HttpGet("{newsId}")]
         public async Task<ActionResult<NewsViewModel>> GetNews([FromRoute] int newsId)
@@ -76,7 +76,7 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// ·s¼W®ø®§
+        /// æ–°å¢æ¶ˆæ¯
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -88,7 +88,7 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// §ó·s®ø®§
+        /// æ›´æ–°æ¶ˆæ¯
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -100,7 +100,7 @@ namespace LSGames.News.Api.Controllers
         }
 
         /// <summary>
-        /// §R°£®ø®§
+        /// åˆªé™¤æ¶ˆæ¯
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>

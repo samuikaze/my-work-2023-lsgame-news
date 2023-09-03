@@ -1,4 +1,4 @@
-﻿using LSGames.News.Api.Models.ServiceModels;
+using LSGames.News.Api.Models.ServiceModels;
 
 namespace LSGames.News.Api.Services
 {

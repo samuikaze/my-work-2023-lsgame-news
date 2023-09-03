@@ -1,4 +1,4 @@
-﻿namespace LSGames.News.Api.Models.ServiceModels
+namespace LSGames.News.Api.Models.ServiceModels
 {
     public class NewsServiceModel
     {
