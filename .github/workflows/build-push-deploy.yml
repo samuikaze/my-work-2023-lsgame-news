@@ -14,9 +14,6 @@ jobs:
   build:
     name: Build
     runs-on: lsgames-news-runner
-    # 上面已經宣告何時執行了，這邊可以不用再次宣告
-    # main branch only
-    # if: github.ref == 'refs/heads/main'
     steps:
     - name: Checkout
       uses: actions/checkout@v3
