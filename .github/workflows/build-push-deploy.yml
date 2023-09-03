@@ -4,7 +4,7 @@ on:
   # 僅允許當 main 分支有變更時執行
   push:
     # 避免 GitHub 又跑一次 CI/CD，先把分支指定為不會變動的分支
-    branches: [ "dev" ]
+    branches: [ "main" ]
   # 如需允許開立 PR 當下就執行，請開啟以下註解
   # pull_request:
       # PR 的目標分支符合底下的宣告才會觸發
