@@ -1,4 +1,4 @@
-﻿using LSGames.News.Repository.Repositories.Abstracts;
+using LSGames.News.Repository.Repositories.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

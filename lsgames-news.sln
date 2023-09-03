@@ -10,8 +10,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSGames.News.Api", "LSGames
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSGames.News.Repository", "LSGames.News.Repository\LSGames.News.Repository.csproj", "{4EB6263A-6839-4574-AC74-98AF027FE711}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項目", "{DE7C52D2-E0D9-40C0-B19E-C791F383A993}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項目", "{3C1B35BA-A663-40F5-AFD9-62D1F5FD0C42}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.github\workflows\build-push-deploy.yml = .github\workflows\build-push-deploy.yml
+		.kubernetes\deployment.yaml = .kubernetes\deployment.yaml
 		README.md = README.md
 	EndProjectSection
 EndProject

@@ -1,4 +1,4 @@
-﻿using LSGames.News.Api.Services;
+using LSGames.News.Api.Services;
 using LSGames.News.Repository.Repositories;
 
 namespace LSGames.News.Api.ServiceProviders

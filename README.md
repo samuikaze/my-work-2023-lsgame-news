@@ -1,4 +1,4 @@
-﻿# 洛嬉遊戲 LSGames 最新消息後端專案
+# 洛嬉遊戲 LSGames 最新消息後端專案
 
 > [返回根目錄](https://github.com/samuikaze/my-work-2023)
 

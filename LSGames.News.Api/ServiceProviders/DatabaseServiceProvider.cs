@@ -1,4 +1,4 @@
-﻿using LSGames.News.Repository.DBContexts;
+using LSGames.News.Repository.DBContexts;
 using Microsoft.EntityFrameworkCore;
 
 namespace LSGames.News.Api.ServiceProviders
