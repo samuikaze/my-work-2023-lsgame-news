@@ -13,7 +13,9 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: lsgames-news-runner
+    # # 目前 Runner 有 SELinux Policy 問題，先暫時改用 GitHub 的 Runner
+    # runs-on: lsgames-news-runner
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -48,7 +50,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        file: ./Dockerfile
+        file: ./LSGames.News.Api/Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
         tags: '${{ secrets.REGISTRY_URL }}/${{ vars.APP_NAME }}:${{ github.sha }}'
@@ -60,7 +62,9 @@ jobs:
     name: Deploy
     # 必須先執行過 build 動作才可以執行 Deploy 動作
     needs: [ build ]
-    runs-on: lsgames-news-runner
+    # 目前 Runner 有 SELinux Policy 問題，先暫時改用 GitHub 的 Runner
+    # runs-on: lsgames-news-runner
+    runs-on: ubuntu-22.04
     steps:
       # 若是使用 self-hosted 的 runner，需額外安裝 kubectl，請將下面的註解打開
       - name: Install kubectl
