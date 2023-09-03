@@ -14,7 +14,7 @@ WORKDIR "/src/LSGames.News.Api"
 RUN dotnet build "LSGames.News.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "LSGames.News.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "LSGames.News.Api.csproj" -c Release -o /app/publish -p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
