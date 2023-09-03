@@ -1,4 +1,5 @@
 using LSGames.News.Api.ServiceProviders;
+using Microsoft.AspNetCore.Http;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -36,8 +37,10 @@ app.UseSwagger(config =>
     {
         config.PreSerializeFilters.Add((swaggerDoc, httpRequest) =>
         {
+            string httpScheme = (app.Environment.IsDevelopment()) ? httpRequest.Scheme : "https";
             swaggerDoc.Servers = new List<OpenApiServer> {
-            new OpenApiServer { Url = $"{httpRequest.Scheme}://{httpRequest.Host.Value}{path}" } };
+                new OpenApiServer { Url = $"{httpScheme}://{httpRequest.Host.Value}{path}" }
+            };
         });
     }
 });
