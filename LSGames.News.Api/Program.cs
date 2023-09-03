@@ -1,4 +1,5 @@
 using LSGames.News.Api.ServiceProviders;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,7 +29,16 @@ var app = builder.Build();
 //}
 
 // 由於展示需要，這邊也開放正式機上顯示 Swagger
-app.UseSwagger();
+app.UseSwagger(config =>
+{
+    config.PreSerializeFilters.Add((swaggerDoc, httpRequest) =>
+    {
+        string path = httpRequest.Path.ToString().Replace("/swagger/v1/swagger.json", "");
+        swaggerDoc.Servers = new List<OpenApiServer> {
+            new OpenApiServer { Url = $"{httpRequest.Scheme}://{httpRequest.Host.Value}{path}" }
+        };
+    });
+});
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
