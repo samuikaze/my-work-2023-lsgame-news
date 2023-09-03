@@ -8,12 +8,9 @@ namespace LSGames.News.Api.ServiceProviders
         public static IServiceCollection AddDatabaseContext(IServiceCollection serviceCollection, IConfiguration config)
         {
             // 若有需要使用資料庫，請將下面的註解打開，並修改為正確的值
-            string? connectionString = config.GetConnectionString("Weathers");
-            string? username = config.GetValue<string>("Credentials:Weathers:Username");
-            string? password = config.GetValue<string>("Credentials:Weathers:Password");
-            Console.WriteLine($"connectionString = {connectionString}");
-            Console.WriteLine($"username = {username}");
-            Console.WriteLine($"password = {password}");
+            string? connectionString = config.GetConnectionString("LSGamesNews");
+            string? username = config.GetValue<string>("Credentials:LSGamesNews:Username");
+            string? password = config.GetValue<string>("Credentials:LSGamesNews:Password");
             if (connectionString == null || username == null || password == null)
             {
                 throw new ArgumentNullException("Connection string, Username or Password setting in appsettings.json can not be null.");
