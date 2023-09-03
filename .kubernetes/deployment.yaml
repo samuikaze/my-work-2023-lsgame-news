@@ -45,6 +45,11 @@ spec:
                 secretKeyRef:
                   name: lsgames-news-secrets
                   key: database.password
+            - name: Swagger__RoutePrefix
+              valueFrom:
+                configMapKeyRef:
+                  name: lsgames-news-configs
+                  key: swagger.route.prefix
 
 ---
 # service.yaml

@@ -31,13 +31,15 @@ var app = builder.Build();
 // 由於展示需要，這邊也開放正式機上顯示 Swagger
 app.UseSwagger(config =>
 {
-    config.PreSerializeFilters.Add((swaggerDoc, httpRequest) =>
+    string? path = app.Configuration.GetValue<string>("Swagger:RoutePrefix");
+    if (!string.IsNullOrEmpty(path))
     {
-        string path = httpRequest.Path.ToString().Replace("/swagger/v1/swagger.json", "");
-        swaggerDoc.Servers = new List<OpenApiServer> {
-            new OpenApiServer { Url = $"{httpRequest.Scheme}://{httpRequest.Host.Value}{path}" }
-        };
-    });
+        config.PreSerializeFilters.Add((swaggerDoc, httpRequest) =>
+        {
+            swaggerDoc.Servers = new List<OpenApiServer> {
+            new OpenApiServer { Url = $"{httpRequest.Scheme}://{httpRequest.Host.Value}{path}" } };
+        });
+    }
 });
 app.UseSwaggerUI();
 
