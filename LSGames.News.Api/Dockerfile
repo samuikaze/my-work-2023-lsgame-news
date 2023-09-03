@@ -5,7 +5,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0.400-alpine3.18-amd64 AS build
 WORKDIR /src
 COPY ["LSGames.News.Api/LSGames.News.Api.csproj", "LSGames.News.Api/"]
 COPY ["LSGames.News.Repository/LSGames.News.Repository.csproj", "LSGames.News.Repository/"]
