@@ -8,13 +8,14 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["LSGames.News.Api/LSGames.News.Api.csproj", "LSGames.News.Api/"]
+COPY ["LSGames.News.Repository/LSGames.News.Repository.csproj", "LSGames.News.Repository/"]
 RUN dotnet restore "LSGames.News.Api/LSGames.News.Api.csproj"
 COPY . .
 WORKDIR "/src/LSGames.News.Api"
 RUN dotnet build "LSGames.News.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "LSGames.News.Api.csproj" -c Release -o /app/publish -p:UseAppHost=false
+RUN dotnet publish "LSGames.News.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
