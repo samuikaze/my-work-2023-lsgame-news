@@ -2,9 +2,9 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 
-namespace LSGames.News.Api.ServiceProviders
+namespace LSGames.News.Api.Extensions
 {
-    public class SwaggerDefinitionServiceProvider
+    public class SwaggerDefinitionExtension
     {
         public static IServiceCollection ConfigureSwagger(IServiceCollection serviceCollection)
         {
