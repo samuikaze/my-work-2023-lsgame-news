@@ -1,9 +1,9 @@
 using LSGames.News.Repository.DBContexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace LSGames.News.Api.ServiceProviders
+namespace LSGames.News.Api.Extensions
 {
-    public class DatabaseServiceProvider
+    public class DatabaseExtension
     {
         public static IServiceCollection AddDatabaseContext(IServiceCollection serviceCollection, IConfiguration config)
         {
