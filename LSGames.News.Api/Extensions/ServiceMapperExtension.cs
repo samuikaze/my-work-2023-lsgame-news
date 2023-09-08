@@ -1,9 +1,9 @@
 using LSGames.News.Api.Services;
 using LSGames.News.Repository.Repositories;
 
-namespace LSGames.News.Api.ServiceProviders
+namespace LSGames.News.Api.Extensions
 {
-    public class ServiceMapperProvider
+    public class ServiceMapperExtension
     {
         public static IServiceCollection? GetServiceProvider(IServiceCollection? serviceCollection)
         {

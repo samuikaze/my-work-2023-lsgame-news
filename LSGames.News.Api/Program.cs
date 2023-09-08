@@ -1,4 +1,4 @@
-using LSGames.News.Api.ServiceProviders;
+using LSGames.News.Api.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -14,9 +14,9 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-SwaggerDefinitionServiceProvider.ConfigureSwagger(builder.Services);
-ServiceMapperProvider.GetServiceProvider(builder.Services);
-DatabaseServiceProvider.AddDatabaseContext(builder.Services, builder.Configuration);
+SwaggerDefinitionExtension.ConfigureSwagger(builder.Services);
+ServiceMapperExtension.GetServiceProvider(builder.Services);
+DatabaseExtension.AddDatabaseContext(builder.Services, builder.Configuration);
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
